@@ -27,7 +27,8 @@ class TestClickAllButtons:
         self.browser = webdriver.Chrome(options=options)
 
         self.browser.get(URL)
-        self.browser.maximize_window()
+        options.add_argument('--headless')
+
 
     def teardown_method(self):
         self.browser.quit()
