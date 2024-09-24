@@ -24,10 +24,11 @@ class TestClickAllButtons:
         options.add_argument('window-position=2000,50')
         options.add_argument("--disable-search-engine-choice-screen")
         options.add_experimental_option("detach", True)
+        options.add_argument('--headless')
         self.browser = webdriver.Chrome(options=options)
 
         self.browser.get(URL)
-        options.add_argument('--headless')
+
 
 
     def teardown_method(self):
